@@ -1,0 +1,352 @@
+/*------------------------------------
+  Markup
+------------------------------------*/
+
+body {
+  color: #1e2022;
+}
+
+code {
+  font-size: 100%;
+}
+
+summary {
+  margin-bottom: .35rem;
+}
+
+.tab-content :not(pre) > code[class*="language-"],
+.tab-content pre[class*="language-"] {
+  border-bottom-right-radius: .3125rem;
+  border-bottom-left-radius: .3125rem;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #fff;
+  font-size: 1em;
+  margin: 0;
+  white-space: pre-wrap;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #142140;
+}
+
+/* Light Theme */
+.prism-light:not(pre) > .prism-light code[class*="language-"],
+pre.prism-light[class*="language-"] {
+  background: #f9fafc;
+}
+
+.prism-light code[class*="language-"],
+pre.prism-light[class*="language-"] {
+  color: #142140;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #2f6f9f;
+}
+
+.token.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #2f6f9f;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #26a5b5;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d09a5c;
+  background: transparent;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #d44950;
+}
+
+.token.function,
+.token.class-name {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  top: 1.0625rem;
+  right: .75rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
+  color: #fff;
+  padding: .5rem 1rem;
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: .3125em;
+  transition: all .2s ease-in-out;
+}
+
+div.code-toolbar > .toolbar a:hover,
+div.code-toolbar > .toolbar a:focus,
+div.code-toolbar > .toolbar button:hover,
+div.code-toolbar > .toolbar button:focus,
+div.code-toolbar > .toolbar span:hover,
+div.code-toolbar > .toolbar span:focus {
+  color: #fff;
+  background-color: #377dff;
+}
+
+/* Light Theme  */
+div.code-toolbar > .prism-light + .toolbar a,
+div.code-toolbar > .prism-light + .toolbar button,
+div.code-toolbar > .prism-light + .toolbar span {
+  color: #142140;
+  background-color: transparent;
+}
+
+div.code-toolbar > .prism-light + .toolbar a:hover,
+div.code-toolbar > .prism-light + .toolbar a:focus,
+div.code-toolbar > .prism-light + .toolbar button:hover,
+div.code-toolbar > .prism-light + .toolbar button:focus,
+div.code-toolbar > .prism-light + .toolbar span:hover,
+div.code-toolbar > .prism-light + .toolbar span:focus {
+  color: #fff;
+  background-color: #377dff;
+}
+
+/*------------------------------------
+  AnchorJS Link
+------------------------------------*/
+
+.hs-docs-heading {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hs-docs-heading ~ p {
+  margin-top: -.5rem;
+}
+
+.hs-docs-heading::before {
+  display: block;
+  height: 6rem;
+  margin-top: -6rem;
+  content: "";
+}
+
+[data-anchorjs-icon]::after {
+  content: attr(data-anchorjs-icon);
+}
+
+.anchorjs-link {
+  padding-left: .5rem;
+  font-size: 90%;
+  color: rgba(55,125,255, .5) !important;
+  transition: color .16s linear;
+  opacity: 0;
+}
+
+.anchorjs-link:hover {
+  color: rgba(55,125,255, 1) !important;
+}
+
+.hs-docs-heading:hover .anchorjs-link {
+  opacity: 1;
+}
+
+/*------------------------------------
+  Copy to clipboard style
+------------------------------------*/
+
+.hs-docs-copy-to-clipboard-text {
+  font-size: 80%;
+  color: #77838f;
+}
+
+.hs-docs-copy-to-clipboard:hover .hs-docs-copy-to-clipboard-text {
+  color: #fff;
+  background-color: #377dff;
+}
+
+
+/*------------------------------------
+  Others
+------------------------------------*/
+
+.navbar-input-group {
+  min-width: 20rem;
+}
+
+@media (max-width: 576px) {
+  .navbar-input-group {
+    min-width: auto;
+    max-width: 11.5rem;
+  }
+}
+
+.page-header-title {
+  font-size: 1.75rem;
+}
+
+[class*="navbar-vertical-aside-show"] .docs-navbar .navbar-brand-wrapper {
+  display: block !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-brand-wrapper-width {
+    max-width: 9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-vertical-aside-show-xl.splitted-content .docs-navbar.navbar {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .navbar-expand-lg .navbar-brand-wrapper-width {
+    max-width: 16.25rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navbar-vertical-aside-show-xl.has-navbar-vertical-aside .docs-navbar.navbar-height {
+    height: auto;
+  }
+}
+
+.scrollspy-example {
+  position: relative;
+  height: 200px;
+  margin-top: .5rem;
+  overflow: auto;
+}
+
+.docs-navbar-vertical-aside {
+  margin-left: 0 !important;
+}
+
+/*------------------------------------
+  List
+------------------------------------*/
+
+.hs-docs-list-sm li {
+  margin-bottom: .35rem;
+}
